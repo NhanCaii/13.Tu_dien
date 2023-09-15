@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="word" placeholder="Nhập từ tiếng anh">
+    <button onclick="translat()">Dịch</button>
+
+    <p id="result">Kết quả</p>
+<script>
+    function translat(){
+
+    
+    var eng=["banana","apple","car","computer"];
+    var viet=["chuối","táo","ô tô","máy tính"];
+
+    let a
+    let word= document.getElementById("word").value;
+
+        for(i=0;i<eng.length;i++){
+            if(word==eng[i]){
+                a=i; break;
+            }
+        }
+
+    document.getElementById("result").innerHTML=viet[a];
+    }
+
+
+</script>
+</body>
+</html>
